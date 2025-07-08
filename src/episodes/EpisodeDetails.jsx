@@ -20,3 +20,4 @@ export default function EpisodeDetails({ episode }) {
     </section>
   );
 }
+//work on above displaying properly on front page I believe episode number is wrong and needs to be title
