@@ -9,19 +9,20 @@ import ShowSelection from "./shows/ShowSelection";
  */
 export default function App() {
   const [shows] = useState(tvShows);
-  const [selectedEpisode, setSelectedEpisode] = useState();
+  const [selectedShow, setSelectedShow] = useState();
 
   return (
     <>
       <header>
         <p>React TV</p>
-        <ShowSelection shows={shows} setSelectedShow={setSelectedEpisode} />
+        <ShowSelection
+          shows={shows}
+          selectedShow={selectedShow}
+          setSelectedShow={setSelectedShow}
+        />
       </header>
       <main>
-        <ShowDetails
-          selectedEpisode={selectedEpisode}
-          setSelectedEpisode={setSelectedEpisode}
-        />
+        <ShowDetails show={selectedShow} />
       </main>
     </>
   );
